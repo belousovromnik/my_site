@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %} Выдача книг {% endblock %}
+
+{% block content %}
+    
+    <h3 class="display-4 text-center my-4">Выдача книг</h3>
+    <div class="row">    
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12 mx-auto">
+                    <a href="{% url 'bookreader_create' %}">
+                        <button type="button" class="btn btn-info btn-sm">Выдать книгу</button>
+                    </a>
+                </div>
+            </div>
+    
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th> Возврат книги </th>
+                        <th> Наименование книги </th>
+                        <th> Читатель </th>
+                        <th> Дата выдачи </th>
+                        <th> Дата возврата </th>
+                        <th> Комментарий </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for bookreader in bookreaders %}
+                        <tr>
+                            <td>
+                                <form action="/index/book_increment_ost/" method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="id" value="{{ bookreader.id }}" />
+                                    <input class="btn btn-primary" type="submit" value="Вернуть книгу" />
+                                </form>
+                            </td>
+                            <td>
+                                <p>{{ bookreader.book }}</p>
+                            </td>
+                            <td>
+                                <p>{{ bookreader.reader }}</p>
+                            </td>
+                            <td>
+                                <p>{{ bookreader.dataout }}</p>
+                            </td>
+                            <td>
+                                <p>{{ bookreader.datain }}</p>
+                            </td>
+                            <td>
+                                <p>{{ bookreader.comment }}</p>
+                            </td>
+                            <td>
+                                <a href="{% url 'bookreader_update' pk=bookreader.id %}">
+                                    <button type="button" class="btn btn-primary btn-sm">Редактировать</button>
+                                </a>
+                            </td>
+                        </tr>        
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
