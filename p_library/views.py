@@ -60,20 +60,20 @@ class AuthorCreate(CreateView):
     model = Author
     form_class = AuthorForm
     template_name = 'author_create.html'
-    success_url = reverse_lazy('author_list')
+    success_url = reverse_lazy('p_library:author_list')
 
 
 class AuthorEdit(UpdateView):  
     model = Author  
     form_class = AuthorForm  
     template_name = 'author_edit.html'  
-    success_url = reverse_lazy('author_list')  
+    success_url = reverse_lazy('p_library:author_list')  
 
 
 class AuthorDelete(DeleteView):
     model = Author
     # template_name = 'cities/delete.html'
-    success_url = reverse_lazy('author_list')
+    success_url = reverse_lazy('p_library:author_list')
 
 
 def bookreader_list(request):
