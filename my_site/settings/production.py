@@ -28,7 +28,6 @@ DEBUG = True
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['lit-coast-26708.herokuapp.com']
-
 # Application definition
 
 INSTALLED_APPS = [
