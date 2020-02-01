@@ -41,5 +41,9 @@ python manage.py migrate
 
 source venv/bin/activate
 
+git add .
+git commit -m 'm'
 git push heroku master
+
+heroku run python manage.py migrate
 
