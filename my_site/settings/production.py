@@ -29,7 +29,7 @@ DEBUG = False
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = [
     'sleepy-inlet-54680.herokuapp.com',
-    'https://lit-coast-26708.herokuapp.com/'
+    'lit-coast-26708.herokuapp.com'
     ]
 
 # Application definition
