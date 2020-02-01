@@ -29,7 +29,6 @@ DEBUG = False
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['sleepy-inlet-54680.herokuapp.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [
