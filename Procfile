@@ -1,3 +1,4 @@
 release: python manage.py migrate
-release: python manage.py loaddata data.xml
+python manage.py loaddata reader.json
+python manage.py loaddata p_library.json
 web: python manage.py runserver 0.0.0.0:$PORT

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<django-objects version="1.0">
+    <object model="reader.reader" pk="1">
+        <field name="full_name" type="TextField">Иванов</field>
+        <field name="birth_year" type="SmallIntegerField">1980</field>
+        <field name="comment" type="TextField">комментарий</field>
+    </object>
+    <object model="reader.reader" pk="2">
+        <field name="full_name" type="TextField">Петров</field>
+        <field name="birth_year" type="SmallIntegerField">1990</field>
+        <field name="comment" type="TextField">123</field>
+    </object>
+    <object model="reader.reader" pk="3">
+        <field name="full_name" type="TextField">Сидоров</field>
+        <field name="birth_year" type="SmallIntegerField">2000</field>
+        <field name="comment" type="TextField">12356</field>
+    </object>
+    <object model="reader.reader" pk="6">
+        <field name="full_name" type="TextField">12221</field>
+        <field name="birth_year" type="SmallIntegerField">1222</field>
+        <field name="comment" type="TextField">111</field>
+    </object>
+</django-objects>
