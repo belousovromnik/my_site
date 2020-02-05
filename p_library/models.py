@@ -45,6 +45,7 @@ class Book(models.Model):
             through_fields=('book', 'reader'),
         )
     readers.empty_value_display = '-empty-'
+    img = models.ImageField(upload_to='book', null=True, blank=True, verbose_name='Фото обложки')
 
     def __str__(self):
         return '{} - {} / {}'.format(self.author, self.title, self.ISBN)

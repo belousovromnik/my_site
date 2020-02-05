@@ -1,0 +1,13 @@
+td.div-inline {
+    display: inline;
+}
+
+.header-tag {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: blue;
+}
+
+/* p {
+    font-size: 2em;
+} */
